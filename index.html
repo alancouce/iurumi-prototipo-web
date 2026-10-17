@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prototipo Iurumí</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Portada mínima: dos entradas y notas plegadas. Mismos tonos neutros que el entorno del prototipo. */
+:root { --bg: #E6E9F3; --panel: #FFFFFF; --hover: #F1F2F8; --fg: #151A2D; --muted: #64708A; --line: #DDE1EC; --acc: #4F46E5; --f: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.55 var(--f); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; border-radius: 6px; }
+.wrap { max-width: 640px; margin: 0 auto; padding-block: 56px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 28px; }
+h1 { font-size: 28px; font-weight: 600; letter-spacing: -0.02em; margin: 0; }
+.lead { margin: 6px 0 0; color: var(--muted); }
+.rol { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.open span[aria-hidden] { color: var(--acc); }
+.open { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; text-decoration: none; font-size: 20px; }
+.open:hover { background: var(--hover); }
+.open b { display: block; font-weight: 600; font-size: 18px; }
+.open small { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+details > summary { list-style: none; cursor: pointer; padding: 12px 20px; font-size: 13.5px; color: var(--muted); border-top: 1px solid var(--line); }
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before { content: '+'; display: inline-block; width: 16px; }
+details[open] > summary::before { content: '−'; }
+details > summary:hover { color: var(--fg); }
+.rol ul { margin: 0; padding: 0 20px 14px 36px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.rol li a { text-decoration: none; }
+.rol li a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.notas { border-top: 1px solid var(--line); }
+.notas > details > summary { border-top: 0; border-bottom: 1px solid var(--line); padding: 14px 0; font-size: 14px; }
+.notas .in { padding: 14px 0 6px; font-size: 14px; color: var(--muted); }
+.notas h3 { font-size: 13px; font-weight: 600; color: var(--fg); margin: 0 0 6px; }
+.notas ul { margin: 0 0 18px; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+.notas p { margin: 0 0 18px; }
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>Prototipo Iurumí</h1>
+    <p class="lead">MVP 1.0 · versión del 17/10/2026. Elegí una vista para empezar.</p>
+  </header>
+
+  
+  <section class="rol">
+    <a class="open" href="paciente.html"><span><b>Paciente</b><small>60 pantallas · Juana Colombres</small></span><span aria-hidden="true">→</span></a>
+    <details>
+      <summary>8 recorridos guiados</summary>
+      <ul><li><a href="paciente.html#r0">Crear la cuenta</a></li><li><a href="paciente.html#r1">Te invita tu médico</a></li><li><a href="paciente.html#r2">Tu consulta de hoy, por video</a></li><li><a href="paciente.html#r3">Sacar un turno</a></li><li><a href="paciente.html#r4">Pagar lo pendiente</a></li><li><a href="paciente.html#r5">Gestionar a un menor</a></li><li><a href="paciente.html#r6">Mis documentos</a></li><li><a href="paciente.html#r7">Perfil y cobertura</a></li></ul>
+    </details>
+  </section>
+  
+  <section class="rol">
+    <a class="open" href="profesional.html"><span><b>Profesional</b><small>68 pantallas · Dr. Marcos Fuentes</small></span><span aria-hidden="true">→</span></a>
+    <details>
+      <summary>10 recorridos guiados</summary>
+      <ul><li><a href="profesional.html#r0">Alta con REFEPS</a></li><li><a href="profesional.html#r1">Alta con SISA caído</a></li><li><a href="profesional.html#r2">Variante: biometría antes de REFEPS</a></li><li><a href="profesional.html#r3">Atender a María por videollamada</a></li><li><a href="profesional.html#r4">Dar un turno (y un sobreturno)</a></li><li><a href="profesional.html#r5">Invitar a un paciente por DNI</a></li><li><a href="profesional.html#r6">Permisos: psicología</a></li><li><a href="profesional.html#r7">Cobrar y ordenar las finanzas</a></li><li><a href="profesional.html#r8">Configurar la agenda</a></li><li><a href="profesional.html#r9">Perfil</a></li></ul>
+    </details>
+  </section>
+
+  <div class="notas">
+    <details>
+      <summary>Qué hay en esta versión</summary>
+      <div class="in">
+        <h3>Reunión del 16/10</h3>
+        <ul>
+          <li>Videollamadas por WhatsApp, fuera de iurumi por ahora.</li>
+          <li>Primero se valida la matrícula y después la biometría (el orden inverso está como recorrido «Variante»).</li>
+          <li>Fotos del DNI con «Lo hago después» y el consejo de Mi Argentina.</li>
+          <li>«Editar datos» con lápiz en cada dato de REFEPS.</li>
+          <li>Celular, dirección, firma y declaración jurada obligatorios.</li>
+          <li>Psicología: solo evoluciones y certificados.</li>
+          <li>Si SISA no responde: carga manual y cuenta en revisión.</li>
+        </ul>
+        <h3>También</h3>
+        <ul>
+          <li>Invitaciones a un DNI, con seguimiento de cada una.</li>
+          <li>«Nuevo turno» y sobreturno, desde la agenda o desde Pacientes.</li>
+          <li>«Cerrar sesión» igual en los dos perfiles, con confirmación.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>Preguntas abiertas</summary>
+      <div class="in">
+        <ul>
+          <li>Biometría antes o después de consultar REFEPS.</li>
+          <li>Fotos del DNI: obligatorias u opcionales con recordatorio; ¿FaceTech las necesita?</li>
+          <li>Lápiz por dato o botón «Editar datos».</li>
+          <li>Permisos de psicología.</li>
+          <li>Profesionales extranjeros con pasaporte y matrículas desactualizadas en REFEPS.</li>
+          <li>Finanzas visible para el paciente.</li>
+        </ul>
+        
+      </div>
+    </details>
+  </div>
+</main>
+</body>
+</html>
