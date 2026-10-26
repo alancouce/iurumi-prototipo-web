@@ -252,7 +252,7 @@ window.IU_DATA = {"rol":"profesional","titulo":"Iurumí Profesional","nav":[{"id
       case 'set': state[d.k] = d.v; broadcast(); break;
       case 'toast': toast(d.msg); break;
       case 'rol':
-        if (d.rol === 'paciente' || d.rol === 'profesional') {
+        if (/^[a-z-]+$/.test(d.rol || '')) {
           location.href = d.rol + '.html' + (d.to ? '#' + d.to + (d.scr ? '~' + d.scr : '') : '');
         }
         break;
